@@ -1,6 +1,6 @@
 const inputEl = document.getElementById('font-size-control')
 const spanEl = document.getElementById('text')
-
+onChangeFontSize()
 inputEl.addEventListener('input', onChangeFontSize)
 
 
