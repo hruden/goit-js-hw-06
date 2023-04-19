@@ -15,11 +15,12 @@ ref.btnDestroyEl.addEventListener('click', DestroyBoxes)
 
 function createBoxes (){
   const amound = ref.inputEl.value;
-  const min = ref.inputEl.getAttribute('min');
-  const max = ref.inputEl.getAttribute('max');
+  const min = Number(ref.inputEl.getAttribute('min'));
+  const max = Number(ref.inputEl.getAttribute('max'));
+  const step = Number(ref.inputEl.getAttribute('step'));
   if ((amound >= min) && (amound <= max)){};
   const arrayDiv = [];
-  for (let i = 0; i < amound; i += 1){
+  for (let i = 0; i < amound; i += step){
     const newDiv = document.createElement('div');
     const newSize = 30 + i * 10;
 
